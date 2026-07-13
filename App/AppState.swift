@@ -1,12 +1,5 @@
-//
-//  AppState.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
 import Foundation
+import Combine
 
 @MainActor
 final class AppState: ObservableObject {
@@ -14,14 +7,34 @@ final class AppState: ObservableObject {
     let recorder = MicrophoneRecorder()
     let coordinator = RecordingCoordinator()
     let hotkey = HotkeyService()
+    let appService = FrontmostAppService()
+    let overlay = OverlayManager()
+    
+    private let updater = UpdateService.shared
 
     init() {
+
+        if !AccessibilityService.ensurePermission() {
+            print("❌ Accessibility permission missing")
+            return
+        }
+
+        print("✅ Accessibility permission granted")
+        
+        recorder.onAudioLevel = { [weak self] level in
+
+            self?.overlay.updateLevel(level)
+
+        }
 
         hotkey.onKeyDown = { [weak self] in
 
             guard let self else { return }
 
-            print("🎤 FN DOWN")
+            self.overlay.show()
+            self.overlay.listening()
+
+            self.appService.saveCurrentApp()
 
             do {
                 try self.recorder.start()
@@ -34,23 +47,32 @@ final class AppState: ObservableObject {
 
             guard let self else { return }
 
-            print("🛑 FN UP")
-
             Task {
 
                 do {
 
                     let url = try self.recorder.stop()
 
+                    self.overlay.processing()
+
+                    self.appService.restorePreviousApp()
+
+                    try? await Task.sleep(for: .milliseconds(250))
+
                     try await self.coordinator.process(audioURL: url)
 
+                    self.overlay.hide()
+
                 } catch {
+
+                    self.overlay.hide()
 
                     print(error)
 
                 }
 
             }
+
         }
 
         hotkey.start()

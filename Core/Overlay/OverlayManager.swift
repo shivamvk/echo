@@ -1,10 +1,4 @@
-//
-//  OverlayManager.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
+import SwiftUI
 
 final class OverlayManager {
 
@@ -14,8 +8,19 @@ final class OverlayManager {
         window.show()
     }
 
+    func listening() {
+        window.setState(.listening)
+    }
+
+    func processing() {
+        window.setState(.processing)
+    }
+
     func hide() {
         window.hide()
     }
-
+    
+    func updateLevel(_ level: CGFloat) {
+        window.updateLevel(level)
+    }
 }

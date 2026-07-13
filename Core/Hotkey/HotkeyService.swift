@@ -1,13 +1,4 @@
-//
-//  HotkeyService.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
-import Carbon
-import Foundation
+import AppKit
 
 final class HotkeyService {
 
@@ -20,7 +11,9 @@ final class HotkeyService {
 
     func start() {
 
-        eventMonitor = NSEvent.addGlobalMonitorForEvents(matching: .flagsChanged) { [weak self] event in
+        eventMonitor = NSEvent.addGlobalMonitorForEvents(
+            matching: [.flagsChanged]
+        ) { [weak self] event in
 
             guard let self else { return }
 
@@ -37,9 +30,6 @@ final class HotkeyService {
                 onKeyUp?()
 
             }
-
         }
-
     }
-
 }

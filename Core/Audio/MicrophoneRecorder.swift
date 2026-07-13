@@ -1,64 +1,82 @@
-//
-//  MicrophoneRecorder.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
+import Foundation
 import AVFoundation
+import CoreGraphics
 
-final class MicrophoneRecorder: AudioRecorder {
+final class MicrophoneRecorder: NSObject, AudioRecorder {
 
-    private let engine = AVAudioEngine()
-    private var audioFile: AVAudioFile?
+    private var recorder: AVAudioRecorder?
     private var outputURL: URL?
+    var onAudioLevel: ((CGFloat) -> Void)?
+    
+    
+    private var meterTimer: Timer?
 
     func start() throws {
 
-        let directory = FileManager.default.temporaryDirectory
-        let fileURL = directory.appendingPathComponent("echo-recording.wav")
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString)
+            .appendingPathExtension("m4a")
 
-        outputURL = fileURL
+        outputURL = url
 
-        let input = engine.inputNode
-        let format = input.outputFormat(forBus: 0)
+        let settings: [String: Any] = [
+            AVFormatIDKey: kAudioFormatMPEG4AAC,
+            AVSampleRateKey: 16000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
 
-        audioFile = try AVAudioFile(
-            forWriting: fileURL,
-            settings: format.settings
-        )
+        recorder = try AVAudioRecorder(url: url, settings: settings)
+        
+        recorder?.isMeteringEnabled = true
 
-        input.removeTap(onBus: 0)
+        recorder?.prepareToRecord()
+        recorder?.record()
+        
+        meterTimer = Timer.scheduledTimer(
+            withTimeInterval: 0.03,
+            repeats: true
+        ) { [weak self] _ in
 
-        input.installTap(
-            onBus: 0,
-            bufferSize: 4096,
-            format: format
-        ) { [weak self] buffer, _ in
+            guard let self else { return }
 
-            try? self?.audioFile?.write(from: buffer)
+            guard let recorder = self.recorder else { return }
+
+            recorder.updateMeters()
+
+            let power = recorder.averagePower(forChannel: 0)
+
+            let minDb: Float = -60
+
+            let level = max(
+                0,
+                (power - minDb) / abs(minDb)
+            )
+
+            DispatchQueue.main.async {
+
+                self.onAudioLevel?(CGFloat(level))
+
+            }
 
         }
-
-        engine.prepare()
-        try engine.start()
+        
     }
 
     func stop() throws -> URL {
+        
+        meterTimer?.invalidate()
 
-        engine.stop()
+        meterTimer = nil
 
-        engine.inputNode.removeTap(onBus: 0)
+        onAudioLevel?(0)
 
-        guard let url = outputURL else {
-            throw NSError(
-                domain: "Echo",
-                code: -1
-            )
+        recorder?.stop()
+
+        guard let outputURL else {
+            throw NSError(domain: "Echo", code: -1)
         }
 
-        return url
+        return outputURL
     }
-
 }

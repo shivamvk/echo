@@ -1,11 +1,3 @@
-//
-//  WhisperService.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
 import Foundation
 import WhisperKit
 
@@ -16,27 +8,36 @@ final class WhisperService {
 
     func load() async throws {
 
-        if whisperKit != nil {
-            return
+        print("Loading WhisperKit...")
+
+        do {
+            if whisperKit == nil {
+                whisperKit = try await WhisperKit()
+            }
+        } catch {
+            print("WHISPER KIT ERROR")
+            print(error)
         }
-
-        whisperKit = try await WhisperKit()
-
+ 
+        print("WhisperKit Loaded")
     }
 
     func transcribe(audioURL: URL) async throws -> String {
 
+        print("Transcribe called")
+
         try await load()
 
         guard let whisperKit else {
-            return ""
+            throw NSError(domain: "Echo", code: -1)
         }
+
+        print("Starting transcription...")
 
         let results = try await whisperKit.transcribe(audioPath: audioURL.path)
 
-        return results
-            .map(\.text)
-            .joined(separator: " ")
+        print("Finished transcription")
 
+        return results.map(\.text).joined(separator: " ")
     }
 }

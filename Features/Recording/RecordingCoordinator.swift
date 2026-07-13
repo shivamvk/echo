@@ -1,22 +1,26 @@
-//
-//  RecordingCoordinator.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
 import Foundation
 
+@MainActor
 final class RecordingCoordinator {
 
-    private let recognizer: SpeechRecognizer
+    private let whisper = WhisperService()
+    private let pipeline = ProcessingPipeline()
+    private let pasteService = PasteService()
 
-    init(recognizer: SpeechRecognizer) {
-        self.recognizer = recognizer
+    func process(audioURL: URL) async throws {
+
+        let transcript = try await whisper.transcribe(audioURL: audioURL)
+
+        print("Raw Transcript:")
+        print(transcript)
+
+        let cleaned = try await pipeline.process(transcript)
+
+        print("Processed Transcript:")
+        print(cleaned)
+        
+        pasteService.paste(cleaned)
+
     }
 
-    func process(audioURL: URL) async throws -> String {
-        try await recognizer.transcribe(audioURL: audioURL)
-    }
 }

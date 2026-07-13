@@ -6,8 +6,67 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DC5870E83002B30F00E4FB8D /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870E73002B30F00E4FB8D /* OverlayView.swift */; };
+		DC5870EA3002B31600E4FB8D /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870E93002B31600E4FB8D /* OverlayWindow.swift */; };
+		DC5870EC3002B31D00E4FB8D /* OverlayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870EB3002B31D00E4FB8D /* OverlayManager.swift */; };
+		DC5870EF3002BAD600E4FB8D /* TextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870EE3002BAD600E4FB8D /* TextProcessor.swift */; };
+		DC5870F13002BADE00E4FB8D /* PassthroughProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870F03002BADE00E4FB8D /* PassthroughProcessor.swift */; };
+		DC5870F53002BAEC00E4FB8D /* ProcessingPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5870F43002BAEC00E4FB8D /* ProcessingPipeline.swift */; };
+		DC5871063002C89000E4FB8D /* FoundationModelProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5871053002C89000E4FB8D /* FoundationModelProcessor.swift */; };
+		DC58710A30034EA700E4FB8D /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58710930034EA700E4FB8D /* Prompt.swift */; };
+		DC58710C30034FB000E4FB8D /* TranscriptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58710B30034FB000E4FB8D /* TranscriptResult.swift */; };
+		DC58710E3003515500E4FB8D /* DeveloperContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58710D3003515500E4FB8D /* DeveloperContext.swift */; };
+		DC587117300361C400E4FB8D /* OverlayStateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC587116300361C400E4FB8D /* OverlayStateStore.swift */; };
+		DC58711A3003710B00E4FB8D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = DC5871193003710B00E4FB8D /* Sparkle */; };
+		DC58711D300371AD00E4FB8D /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58711C3003712D00E4FB8D /* UpdateService.swift */; };
+		DC587123300375DD00E4FB8D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC587122300375DD00E4FB8D /* WelcomeView.swift */; };
+		DC5871263003777800E4FB8D /* AccessibilityPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5871253003777800E4FB8D /* AccessibilityPermission.swift */; };
+		DC5871283003785800E4FB8D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5871273003785800E4FB8D /* OnboardingViewModel.swift */; };
+		DC58712A3003792800E4FB8D /* MicrophonePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5871293003792800E4FB8D /* MicrophonePermission.swift */; };
+		DC58712C30037A2C00E4FB8D /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58712B30037A2C00E4FB8D /* AppPreferences.swift */; };
+		DCC833E8300220ED00F763E2 /* MicrophoneRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC833E73002208400F763E2 /* MicrophoneRecorder.swift */; };
+		DCC833E93002210000F763E2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC833E63002207B00F763E2 /* AudioRecorder.swift */; };
+		DCC833EA3002210700F763E2 /* RecordingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC833E230021FB200F763E2 /* RecordingCoordinator.swift */; };
+		DCC833EC3002211300F763E2 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC833DF30021F8000F763E2 /* SpeechRecognizer.swift */; };
+		DCC848343002A28A00F763E2 /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCC848333002A28A00F763E2 /* WhisperKit */; };
+		DCC848363002A2B800F763E2 /* WhisperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC848353002A2B800F763E2 /* WhisperService.swift */; };
+		DCC848393002A52D00F763E2 /* PasteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC848383002A52D00F763E2 /* PasteService.swift */; };
+		DCC8483C3002A7B600F763E2 /* HotkeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8483B3002A7B600F763E2 /* HotkeyService.swift */; };
+		DCC8483F3002A8E400F763E2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8483E3002A87300F763E2 /* AppState.swift */; };
+		DCC848413002A97100F763E2 /* FrontmostAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC848403002A97100F763E2 /* FrontmostAppService.swift */; };
+		DCC848443002AEB400F763E2 /* AccessibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC848433002AEB300F763E2 /* AccessibilityService.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		DC5870E73002B30F00E4FB8D /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		DC5870E93002B31600E4FB8D /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
+		DC5870EB3002B31D00E4FB8D /* OverlayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
+		DC5870EE3002BAD600E4FB8D /* TextProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessor.swift; sourceTree = "<group>"; };
+		DC5870F03002BADE00E4FB8D /* PassthroughProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughProcessor.swift; sourceTree = "<group>"; };
+		DC5870F43002BAEC00E4FB8D /* ProcessingPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingPipeline.swift; sourceTree = "<group>"; };
+		DC5871053002C89000E4FB8D /* FoundationModelProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationModelProcessor.swift; sourceTree = "<group>"; };
+		DC58710930034EA700E4FB8D /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		DC58710B30034FB000E4FB8D /* TranscriptResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptResult.swift; sourceTree = "<group>"; };
+		DC58710D3003515500E4FB8D /* DeveloperContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperContext.swift; sourceTree = "<group>"; };
+		DC587116300361C400E4FB8D /* OverlayStateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayStateStore.swift; sourceTree = "<group>"; };
+		DC58711C3003712D00E4FB8D /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
+		DC587122300375DD00E4FB8D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DC5871253003777800E4FB8D /* AccessibilityPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityPermission.swift; sourceTree = "<group>"; };
+		DC5871273003785800E4FB8D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		DC5871293003792800E4FB8D /* MicrophonePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePermission.swift; sourceTree = "<group>"; };
+		DC58712B30037A2C00E4FB8D /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		DCC833CE30021E0800F763E2 /* echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC833DF30021F8000F763E2 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		DCC833E230021FB200F763E2 /* RecordingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCoordinator.swift; sourceTree = "<group>"; };
+		DCC833E63002207B00F763E2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		DCC833E73002208400F763E2 /* MicrophoneRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneRecorder.swift; sourceTree = "<group>"; };
+		DCC848353002A2B800F763E2 /* WhisperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperService.swift; sourceTree = "<group>"; };
+		DCC848383002A52D00F763E2 /* PasteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteService.swift; sourceTree = "<group>"; };
+		DCC8483B3002A7B600F763E2 /* HotkeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyService.swift; sourceTree = "<group>"; };
+		DCC8483E3002A87300F763E2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DCC848403002A97100F763E2 /* FrontmostAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontmostAppService.swift; sourceTree = "<group>"; };
+		DCC848433002AEB300F763E2 /* AccessibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +82,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC848343002A28A00F763E2 /* WhisperKit in Frameworks */,
+				DC58711A3003710B00E4FB8D /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC5870E63002B30600E4FB8D /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				DC587116300361C400E4FB8D /* OverlayStateStore.swift */,
+				DC5870EB3002B31D00E4FB8D /* OverlayManager.swift */,
+				DC5870E93002B31600E4FB8D /* OverlayWindow.swift */,
+				DC5870E73002B30F00E4FB8D /* OverlayView.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		DC5870ED3002BACD00E4FB8D /* TextProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				DC58710D3003515500E4FB8D /* DeveloperContext.swift */,
+				DC58710B30034FB000E4FB8D /* TranscriptResult.swift */,
+				DC58710930034EA700E4FB8D /* Prompt.swift */,
+				DC5871053002C89000E4FB8D /* FoundationModelProcessor.swift */,
+				DC5870F43002BAEC00E4FB8D /* ProcessingPipeline.swift */,
+				DC5870F03002BADE00E4FB8D /* PassthroughProcessor.swift */,
+				DC5870EE3002BAD600E4FB8D /* TextProcessor.swift */,
+			);
+			path = TextProcessing;
+			sourceTree = "<group>";
+		};
+		DC58711B3003712400E4FB8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC58711C3003712D00E4FB8D /* UpdateService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC587121300375D300E4FB8D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DC5871273003785800E4FB8D /* OnboardingViewModel.swift */,
+				DC587122300375DD00E4FB8D /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DC5871243003776C00E4FB8D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		DCC833C530021E0800F763E2 = {
 			isa = PBXGroup;
 			children = (
-				DCC833D030021E0800F763E2 /* echo */,
+				DC58711B3003712400E4FB8D /* Services */,
+				DCC8483D3002A86B00F763E2 /* App */,
+				DCC833DD30021F5500F763E2 /* Features */,
+				DCC833DC30021F3100F763E2 /* Core */,
 				DCC833CF30021E0800F763E2 /* Products */,
+				DCC833D030021E0800F763E2 /* echo */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +157,92 @@
 				DCC833CE30021E0800F763E2 /* echo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC833DC30021F3100F763E2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DC58712B30037A2C00E4FB8D /* AppPreferences.swift */,
+				DC5871243003776C00E4FB8D /* New Group */,
+				DC5870ED3002BACD00E4FB8D /* TextProcessing */,
+				DC5870E63002B30600E4FB8D /* Overlay */,
+				DCC848423002AEAC00F763E2 /* Permissions */,
+				DCC8483A3002A7B100F763E2 /* Hotkey */,
+				DCC848373002A52800F763E2 /* Paste */,
+				DCC833E53002207600F763E2 /* Audio */,
+				DCC833DE30021F7400F763E2 /* Speech */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DCC833DD30021F5500F763E2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DC587121300375D300E4FB8D /* Onboarding */,
+				DCC833E330021FBA00F763E2 /* Recording */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DCC833DE30021F7400F763E2 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				DCC848353002A2B800F763E2 /* WhisperService.swift */,
+				DCC833DF30021F8000F763E2 /* SpeechRecognizer.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		DCC833E330021FBA00F763E2 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				DCC833E230021FB200F763E2 /* RecordingCoordinator.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		DCC833E53002207600F763E2 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				DCC833E73002208400F763E2 /* MicrophoneRecorder.swift */,
+				DCC833E63002207B00F763E2 /* AudioRecorder.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		DCC848373002A52800F763E2 /* Paste */ = {
+			isa = PBXGroup;
+			children = (
+				DCC848403002A97100F763E2 /* FrontmostAppService.swift */,
+				DCC848383002A52D00F763E2 /* PasteService.swift */,
+			);
+			path = Paste;
+			sourceTree = "<group>";
+		};
+		DCC8483A3002A7B100F763E2 /* Hotkey */ = {
+			isa = PBXGroup;
+			children = (
+				DCC8483B3002A7B600F763E2 /* HotkeyService.swift */,
+			);
+			path = Hotkey;
+			sourceTree = "<group>";
+		};
+		DCC8483D3002A86B00F763E2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DCC8483E3002A87300F763E2 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DCC848423002AEAC00F763E2 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				DC5871293003792800E4FB8D /* MicrophonePermission.swift */,
+				DC5871253003777800E4FB8D /* AccessibilityPermission.swift */,
+				DCC848433002AEB300F763E2 /* AccessibilityService.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +265,8 @@
 			);
 			name = echo;
 			packageProductDependencies = (
+				DCC848333002A28A00F763E2 /* WhisperKit */,
+				DC5871193003710B00E4FB8D /* Sparkle */,
 			);
 			productName = echo;
 			productReference = DCC833CE30021E0800F763E2 /* echo.app */;
@@ -82,6 +284,7 @@
 				TargetAttributes = {
 					DCC833CD30021E0800F763E2 = {
 						CreatedOnToolsVersion = 26.6;
+						LastSwiftMigration = 2660;
 					};
 				};
 			};
@@ -94,6 +297,10 @@
 			);
 			mainGroup = DCC833C530021E0800F763E2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DCC848323002A28A00F763E2 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */,
+				DC5871183003710B00E4FB8D /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DCC833CF30021E0800F763E2 /* Products */;
 			projectDirPath = "";
@@ -119,6 +326,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC848363002A2B800F763E2 /* WhisperService.swift in Sources */,
+				DC5870EA3002B31600E4FB8D /* OverlayWindow.swift in Sources */,
+				DC58712C30037A2C00E4FB8D /* AppPreferences.swift in Sources */,
+				DC58710E3003515500E4FB8D /* DeveloperContext.swift in Sources */,
+				DC58710C30034FB000E4FB8D /* TranscriptResult.swift in Sources */,
+				DCC833E93002210000F763E2 /* AudioRecorder.swift in Sources */,
+				DCC848443002AEB400F763E2 /* AccessibilityService.swift in Sources */,
+				DC587117300361C400E4FB8D /* OverlayStateStore.swift in Sources */,
+				DC58712A3003792800E4FB8D /* MicrophonePermission.swift in Sources */,
+				DC58710A30034EA700E4FB8D /* Prompt.swift in Sources */,
+				DCC848393002A52D00F763E2 /* PasteService.swift in Sources */,
+				DCC8483F3002A8E400F763E2 /* AppState.swift in Sources */,
+				DC5870EC3002B31D00E4FB8D /* OverlayManager.swift in Sources */,
+				DCC8483C3002A7B600F763E2 /* HotkeyService.swift in Sources */,
+				DCC833EA3002210700F763E2 /* RecordingCoordinator.swift in Sources */,
+				DC5870F53002BAEC00E4FB8D /* ProcessingPipeline.swift in Sources */,
+				DCC833E8300220ED00F763E2 /* MicrophoneRecorder.swift in Sources */,
+				DC5870EF3002BAD600E4FB8D /* TextProcessor.swift in Sources */,
+				DC5870E83002B30F00E4FB8D /* OverlayView.swift in Sources */,
+				DC5870F13002BADE00E4FB8D /* PassthroughProcessor.swift in Sources */,
+				DC5871283003785800E4FB8D /* OnboardingViewModel.swift in Sources */,
+				DC5871263003777800E4FB8D /* AccessibilityPermission.swift in Sources */,
+				DC587123300375DD00E4FB8D /* WelcomeView.swift in Sources */,
+				DC5871063002C89000E4FB8D /* FoundationModelProcessor.swift in Sources */,
+				DCC848413002A97100F763E2 /* FrontmostAppService.swift in Sources */,
+				DCC833EC3002211300F763E2 /* SpeechRecognizer.swift in Sources */,
+				DC58711D300371AD00E4FB8D /* UpdateService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,17 +482,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				DEVELOPMENT_TEAM = 9J4BS2KGXN;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = echo/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Echo needs microphone access for speech recognition.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/whisper.cpp/build/bin",
+					"$(PROJECT_DIR)/whisper.cpp/build/examples",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shivambhasin29.echo.echo;
@@ -268,6 +512,8 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -278,17 +524,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				DEVELOPMENT_TEAM = 9J4BS2KGXN;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = echo/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Echo needs microphone access for speech recognition.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/whisper.cpp/build/bin",
+					"$(PROJECT_DIR)/whisper.cpp/build/examples",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shivambhasin29.echo.echo;
@@ -298,6 +554,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -325,6 +582,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC5871183003710B00E4FB8D /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.4;
+			};
+		};
+		DCC848323002A28A00F763E2 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/argmax-oss-swift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC5871193003710B00E4FB8D /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC5871183003710B00E4FB8D /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+		DCC848333002A28A00F763E2 /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC848323002A28A00F763E2 /* XCRemoteSwiftPackageReference "argmax-oss-swift" */;
+			productName = WhisperKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCC833C630021E0800F763E2 /* Project object */;
 }

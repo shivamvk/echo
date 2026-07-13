@@ -1,25 +1,24 @@
-//
-//  PasteService.swift
-//  echo
-//
-//  Created by Shivam Bhasin on 11/07/26.
-//
-
-
 import AppKit
 
 final class PasteService {
 
     func paste(_ text: String) {
 
-        let pasteboard = NSPasteboard.general
+        let pb = NSPasteboard.general
+        pb.clearContents()
+        pb.setString(text, forType: .string)
 
-        pasteboard.clearContents()
-        pasteboard.setString(text, forType: .string)
+        guard let app = NSWorkspace.shared.frontmostApplication else {
+            print("No frontmost app")
+            return
+        }
+
+        print("Frontmost:", app.localizedName ?? "")
+        print("PID:", app.processIdentifier)
 
         let source = CGEventSource(stateID: .combinedSessionState)
 
-        let commandDown = CGEvent(
+        let cmdDown = CGEvent(
             keyboardEventSource: source,
             virtualKey: 0x37,
             keyDown: true
@@ -37,18 +36,28 @@ final class PasteService {
             keyDown: false
         )
 
-        let commandUp = CGEvent(
+        let cmdUp = CGEvent(
             keyboardEventSource: source,
             virtualKey: 0x37,
             keyDown: false
         )
 
+        cmdDown?.flags = .maskCommand
         vDown?.flags = .maskCommand
         vUp?.flags = .maskCommand
+        cmdUp?.flags = .maskCommand
 
-        commandDown?.post(tap: .cghidEventTap)
-        vDown?.post(tap: .cghidEventTap)
-        vUp?.post(tap: .cghidEventTap)
-        commandUp?.post(tap: .cghidEventTap)
+        cmdDown?.postToPid(app.processIdentifier)
+        usleep(10000)
+
+        vDown?.postToPid(app.processIdentifier)
+        usleep(10000)
+
+        vUp?.postToPid(app.processIdentifier)
+        usleep(10000)
+
+        cmdUp?.postToPid(app.processIdentifier)
+
+        print("Paste events posted")
     }
 }
