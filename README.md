@@ -1,3 +1,7 @@
+![Platform](https://img.shields.io/badge/platform-macOS-blue)
+![Swift](https://img.shields.io/badge/Swift-6-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 # Echo
 
 Echo is a native macOS voice dictation app that lets you hold a hotkey, speak naturally, and instantly paste polished text into any application.
