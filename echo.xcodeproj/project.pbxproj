@@ -56,6 +56,8 @@
 		DC5871273003785800E4FB8D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		DC5871293003792800E4FB8D /* MicrophonePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePermission.swift; sourceTree = "<group>"; };
 		DC58712B30037A2C00E4FB8D /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		DC5871363004F63100E4FB8D /* appcast.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
+		DC5871383005026200E4FB8D /* release.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = release.sh; sourceTree = "<group>"; };
 		DCC833CE30021E0800F763E2 /* echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC833DF30021F8000F763E2 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		DCC833E230021FB200F763E2 /* RecordingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCoordinator.swift; sourceTree = "<group>"; };
@@ -139,9 +141,27 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		DC5871353004F62D00E4FB8D /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				DC5871363004F63100E4FB8D /* appcast.xml */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		DC5871373005025B00E4FB8D /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DC5871383005026200E4FB8D /* release.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		DCC833C530021E0800F763E2 = {
 			isa = PBXGroup;
 			children = (
+				DC5871373005025B00E4FB8D /* scripts */,
+				DC5871353004F62D00E4FB8D /* docs */,
 				DC58711B3003712400E4FB8D /* Services */,
 				DCC8483D3002A86B00F763E2 /* App */,
 				DCC833DD30021F5500F763E2 /* Features */,
@@ -486,7 +506,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 9J4BS2KGXN;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
@@ -504,7 +524,7 @@
 					"$(PROJECT_DIR)/whisper.cpp/build/bin",
 					"$(PROJECT_DIR)/whisper.cpp/build/examples",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shivambhasin29.echo.echo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -528,7 +548,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 9J4BS2KGXN;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
@@ -546,7 +566,7 @@
 					"$(PROJECT_DIR)/whisper.cpp/build/bin",
 					"$(PROJECT_DIR)/whisper.cpp/build/examples",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shivambhasin29.echo.echo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;

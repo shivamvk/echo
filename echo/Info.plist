@@ -12,9 +12,9 @@
 
     <key>CFBundleVersion</key>
     <string>$(CURRENT_PROJECT_VERSION)</string>
-
+    
     <key>SUFeedURL</key>
-    <string>https://example.com/appcast.xml</string>
+    <string>https://shivamvk.github.io/echo/appcast.xml</string>
 
     <key>SUPublicEDKey</key>
     <string>r/s2IJTmKw3htE2h2XiggIj1DA1oSkh2+HQp/1SlPps=</string>
