@@ -3,13 +3,12 @@
     <channel>
         <title>echo</title>
         <item>
-            <title>1.0</title>
-            <pubDate>Mon, 13 Jul 2026 15:55:57 +0530</pubDate>
+            <title>1.0.0</title>
+            <pubDate>Mon, 13 Jul 2026 16:09:37 +0530</pubDate>
             <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/shivamvk/echo/releases/download/v1.0.0/echo-1.0.0.zip" length="4735353" type="application/octet-stream" sparkle:edSignature="jmKhQqJBQvbjfn3KJQ1nrXC99HZTus+XgpVgg2rjWHWKCqhVkt+xyFq8wAl0YCCavlcrLXBgSG3+Ll2xYIJQCQ=="/>
+            <enclosure url="https://shivamvk.github.io/echo/echo-1.0.0.zip" length="4735388" type="application/octet-stream" sparkle:edSignature="6C3t06lIt8x5NuEaNNuD89llLAK/6/xmDmLC9hdaGnciiNikHsQjR+1/3KRnsbhh6pXwuTvOsjI4aSq8sbsQAA=="/>
         </item>
     </channel>
 </rss>
-
