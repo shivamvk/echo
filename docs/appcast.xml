@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>echo</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Mon, 13 Jul 2026 15:55:57 +0530</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.5</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/shivamvk/echo/releases/download/v1.0.0/echo-1.0.0.zip" length="4735353" type="application/octet-stream" sparkle:edSignature="jmKhQqJBQvbjfn3KJQ1nrXC99HZTus+XgpVgg2rjWHWKCqhVkt+xyFq8wAl0YCCavlcrLXBgSG3+Ll2xYIJQCQ=="/>
+        </item>
+    </channel>
+</rss>
+
