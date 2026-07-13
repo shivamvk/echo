@@ -6,9 +6,9 @@
             <title>1.0.0</title>
             <pubDate>Mon, 13 Jul 2026 16:09:37 +0530</pubDate>
             <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://shivamvk.github.io/echo/echo-1.0.0.zip" length="4735388" type="application/octet-stream" sparkle:edSignature="6C3t06lIt8x5NuEaNNuD89llLAK/6/xmDmLC9hdaGnciiNikHsQjR+1/3KRnsbhh6pXwuTvOsjI4aSq8sbsQAA=="/>
+            <enclosure url="https://shivamvk.github.io/echo-1.0.1.zip" length="4735390" type="application/octet-stream" sparkle:edSignature="HB2PREgp8KVI/lH6xwyFk1CsYMEbFzmBfJUmnOImXfFWfwMmb0bbT3XEcE1VPGUy5B7fuHszC3pj+pxyrEWPAA=="/>
         </item>
     </channel>
 </rss>
