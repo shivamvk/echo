@@ -134,13 +134,6 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		DC5871243003776C00E4FB8D /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		DC5871353004F62D00E4FB8D /* docs */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				DC58712B30037A2C00E4FB8D /* AppPreferences.swift */,
-				DC5871243003776C00E4FB8D /* New Group */,
 				DC5870ED3002BACD00E4FB8D /* TextProcessing */,
 				DC5870E63002B30600E4FB8D /* Overlay */,
 				DCC848423002AEAC00F763E2 /* Permissions */,

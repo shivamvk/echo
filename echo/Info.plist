@@ -19,5 +19,12 @@
     <key>SUPublicEDKey</key>
     <string>r/s2IJTmKw3htE2h2XiggIj1DA1oSkh2+HQp/1SlPps=</string>
     
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Echo requires microphone access to record your voice and transcribe speech into text.</string>
+    
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Echo requires permission to paste transcribed text into the active application.</string>
+    
 </dict>
 </plist>
+
